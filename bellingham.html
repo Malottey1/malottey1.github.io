@@ -21,6 +21,19 @@
         font-family: "Space Grotesk", sans-serif;
         color: #fff;
         background-color: #0d1117;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
 
       .header {
@@ -30,6 +43,18 @@
         padding: 20px;
         background-color: #161b22;
         color: #f0f6fc;
+        animation: slideDown 1s ease-out;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-50%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .header .logo img {
@@ -51,6 +76,18 @@
         height: 2px;
         background-color: #30363d;
         margin: 0 20px;
+        animation: slideIn 1.2s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          width: 0;
+          opacity: 0;
+        }
+        to {
+          width: 100%;
+          opacity: 1;
+        }
       }
 
       .container {
@@ -60,6 +97,24 @@
         justify-content: center;
         min-height: 100vh;
         overflow: hidden;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+        animation: scaleUp 1s ease-out;
+      }
+
+      .container:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes scaleUp {
+        from {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
 
       .main-image {
@@ -71,6 +126,11 @@
         object-fit: cover;
         filter: brightness(50%);
         z-index: -1;
+        transition: filter 0.3s ease;
+      }
+
+      .container:hover .main-image {
+        filter: brightness(60%);
       }
 
       .text-content {
@@ -80,6 +140,18 @@
         background: rgba(13, 17, 23, 0.8);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1.5s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .highlighted-number {
@@ -112,7 +184,9 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="/images/wtb-2.svg" alt="Logo" />
+        <a href="index.html">
+          <img src="/images/wtb-2.svg" alt="Logo" />
+        </a>
       </div>
       <div class="account">Account</div>
     </header>
