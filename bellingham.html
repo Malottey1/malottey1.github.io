@@ -9,20 +9,119 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Global styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        color: #fff;
+        background-color: #0d1117;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #161b22;
+        color: #f0f6fc;
+      }
+
+      .header .logo img {
+        width: 50px;
+        height: auto;
+      }
+
+      .header .account {
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .header .account:hover {
+        color: #58a6ff;
+      }
+
+      .line {
+        height: 2px;
+        background-color: #30363d;
+        margin: 0 20px;
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .main-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(50%);
+        z-index: -1;
+      }
+
+      .text-content {
+        max-width: 600px;
+        padding: 20px;
+        text-align: center;
+        background: rgba(13, 17, 23, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .highlighted-number {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #58a6ff;
+      }
+
+      .space-grotesk-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+
+      .space-grotesk-paragraph {
+        font-size: 1.1rem;
+        margin: 15px 0;
+        line-height: 1.6;
+      }
+
+      .space-grotesk-paragraph:nth-child(odd) {
+        color: #c9d1d9;
+      }
+
+      .space-grotesk-paragraph:nth-child(even) {
+        color: #8b949e;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
-      <div class="logo"><img src="/images/wtb-2.svg" alt="Logo" /></div>
+      <div class="logo">
+        <img src="/images/wtb-2.svg" alt="Logo" />
+      </div>
       <div class="account">Account</div>
     </header>
+
     <div class="line"></div>
+
     <div class="container">
       <main class="content">
-        <img
-          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.skysports.com%2Ffootball%2Fnews%2F12016%2F12248628%2Fjude-bellingham-england-call-up-for-borussia-dortmund-player-in-doubt-due-to-coronavirus-restrictions&psig=AOvVaw0fFVvr0QrYCTFsfRc0sHu4&ust=1730748981261000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDWz8T0wIkDFQAAAAAdAAAAABAI"
-          alt="Main image"
-          class="main-image"
-        />
+        <img src="images/bellingham.jpg" alt="Main image" class="main-image" />
         <div class="text-content">
           <div class="highlighted-number">19</div>
           <h2 class="space-grotesk-header">Jude Bellingham</h2>
