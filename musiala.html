@@ -6,6 +6,58 @@
   <title>Jamal Musiala</title>
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    /* Dark mode styling */
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    
+    .header, .line {
+      background-color: #1e1e1e;
+      border-bottom: 5px solid #f3913d;
+    }
+    
+    .account {
+      color: #e0e0e0;
+    }
+    
+    /* Image styling and hover animation */
+    .main-image {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 8px;
+      margin: 0 auto 20px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .main-image:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Highlighted number hover effect */
+    .highlighted-number {
+      font-size: 100px;
+      font-weight: bold;
+      color: #f28d4c;
+      transition: color 0.3s ease;
+    }
+    .highlighted-number:hover {
+      color: #f3913d;
+    }
+    
+    /* Account and logo hover effect */
+    .account:hover {
+      color: #f3913d;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .logo img:hover {
+      filter: brightness(1.2);
+      transition: filter 0.3s ease;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -15,7 +67,7 @@
   <div class="line"></div>
   <div class="container">
     <main class="content">
-      <img src="images/3.png" alt="Main image" class="main-image">
+      <img src="images/9.jpg" alt="Main image" class="main-image">
       <div class="text-content">
         <div class="highlighted-number">42</div>
         <h2 class="space-grotesk-header">Jamal Musiala</h2>
