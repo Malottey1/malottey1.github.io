@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Updated to v3 for Node 20 compatibility
+
+      - name: Clear Git Cache  # Clear Git cache to prevent exit code 128
+        run: |
+          git config --global --unset-all url."https://".insteadOf || true
+          git config --global --unset-all url."git@github.com:".insteadOf || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4  # Updated to v4 for Node 20 compatibility
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ 
